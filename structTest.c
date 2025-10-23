@@ -16,6 +16,7 @@ int peopleCount = 0;
 void addPerson();
 void removePerson();
 void listPeople();
+int comparePeople(const person* a, const person* b, int sortOption);
 void readNumber(int* dest);
 void readFloat(float* dest);
 
@@ -93,18 +94,80 @@ void removePerson() {
 }
 
 void listPeople() {
+    if (peopleCount == 0) {
+        printf("No people in the list yet.\n");
+        return;
+    }
+
+    printf("How would you like the list to be sorted?\n");
+    printf("1. ID (ascending)\n");
+    printf("2. First name (A-Z)\n");
+    printf("3. Last name (A-Z)\n");
+    printf("4. Age (youngest first)\n");
+    printf("5. Height (shortest first)\n> ");
+
+    int sortOption;
+    readNumber(&sortOption);
+
+    if (sortOption < 1 || sortOption > 5) {
+        printf("Invalid option. Defaulting to ID order.\n");
+        sortOption = 1;
+    }
+
+    person sorted[1024];
+    for (size_t i = 0; i < (size_t)peopleCount; i++) {
+        sorted[i] = people[i];
+    }
+
+    for (size_t i = 0; i < (size_t)peopleCount; i++) {
+        for (size_t j = i + 1; j < (size_t)peopleCount; j++) {
+            if (comparePeople(&sorted[i], &sorted[j], sortOption) > 0) {
+                person temp = sorted[i];
+                sorted[i] = sorted[j];
+                sorted[j] = temp;
+            }
+        }
+    }
+
     printf("======== %d PEOPLE ========\n", peopleCount);
 
-    for (size_t i = 0; i < peopleCount; i++)
+    for (size_t i = 0; i < (size_t)peopleCount; i++)
     {
-        person person = people[i];
+        person person = sorted[i];
         printf("ID: %d\n", person.id);
         printf("Name: %s %s\n", person.firstName, person.lastName);
         printf("Age: %d\n", person.age);
         printf("Height: %.2fm\n", person.height);
         printf("-----------------\n");
     }
-    
+
+}
+
+int comparePeople(const person* a, const person* b, int sortOption) {
+    switch (sortOption)
+    {
+    case 2: {
+        int cmp = strcmp(a->firstName, b->firstName);
+        return cmp != 0 ? cmp : (a->id - b->id);
+    }
+    case 3: {
+        int cmp = strcmp(a->lastName, b->lastName);
+        return cmp != 0 ? cmp : (a->id - b->id);
+    }
+    case 4:
+        if (a->age == b->age) {
+            return a->id - b->id;
+        }
+        return a->age - b->age;
+    case 5:
+        if (a->height == b->height) {
+            return a->id - b->id;
+        }
+        return (a->height > b->height) - (a->height < b->height);
+    case 1:
+    default:
+        return a->id - b->id;
+    }
 }
 
 void readNumber(int* dest) {
