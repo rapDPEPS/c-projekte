@@ -1,0 +1,1 @@
+/bin/clang -g -Wl,--allow-multiple-definition CMakeFiles/MinimalCMake.dir/helloWorld.c.o -o MinimalCMake 

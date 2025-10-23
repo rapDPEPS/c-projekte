@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build",
+  "command": "/bin/clang   -g -std=gnu17 -o CMakeFiles/MinimalCMake.dir/helloWorld.c.o -c /home/ldap/Xentwicklung/Raphael.Thom/c-projekte/helloWorld.c",
+  "file": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/helloWorld.c",
+  "output": "CMakeFiles/MinimalCMake.dir/helloWorld.c.o"
+},
+{
+  "directory": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build",
+  "command": "/bin/clang   -g -std=gnu17 -o CMakeFiles/RockPaperScissor.dir/RockPaperScissor.c.o -c /home/ldap/Xentwicklung/Raphael.Thom/c-projekte/RockPaperScissor.c",
+  "file": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/RockPaperScissor.c",
+  "output": "CMakeFiles/RockPaperScissor.dir/RockPaperScissor.c.o"
+},
+{
+  "directory": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build",
+  "command": "/bin/clang   -g -std=gnu17 -o CMakeFiles/StructTest.dir/structTest.c.o -c /home/ldap/Xentwicklung/Raphael.Thom/c-projekte/structTest.c",
+  "file": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/structTest.c",
+  "output": "CMakeFiles/StructTest.dir/structTest.c.o"
+}
+]
