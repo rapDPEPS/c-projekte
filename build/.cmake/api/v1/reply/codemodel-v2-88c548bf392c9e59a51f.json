@@ -17,7 +17,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -34,12 +35,20 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 0,
+					"id" : "DynamicMemory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DynamicMemory-Debug-a157323a531bc9518d07.json",
+					"name" : "DynamicMemory",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 0,
 					"id" : "MinimalCMake::@6890427a1f51a3e7e1df",

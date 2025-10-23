@@ -49,4 +49,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/MinimalCMake.dir/DependInfo.cmake"
   "CMakeFiles/RockPaperScissor.dir/DependInfo.cmake"
   "CMakeFiles/StructTest.dir/DependInfo.cmake"
+  "CMakeFiles/DynamicMemory.dir/DependInfo.cmake"
   )

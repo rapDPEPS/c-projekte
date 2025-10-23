@@ -11,3 +11,4 @@ add_executable(RockPaperScissor RockPaperScissor.c)
 #add_executable(MultipleFiles a.c b.c)
 
 add_executable(StructTest structTest.c)
+add_executable(DynamicMemory dynamicMemory.c)

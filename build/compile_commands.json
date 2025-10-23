@@ -16,5 +16,11 @@
   "command": "/bin/clang   -g -std=gnu17 -o CMakeFiles/StructTest.dir/structTest.c.o -c /home/ldap/Xentwicklung/Raphael.Thom/c-projekte/structTest.c",
   "file": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/structTest.c",
   "output": "CMakeFiles/StructTest.dir/structTest.c.o"
+},
+{
+  "directory": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build",
+  "command": "/bin/clang   -g -std=gnu17 -o CMakeFiles/DynamicMemory.dir/dynamicMemory.c.o -c /home/ldap/Xentwicklung/Raphael.Thom/c-projekte/dynamicMemory.c",
+  "file": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/dynamicMemory.c",
+  "output": "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.o"
 }
 ]

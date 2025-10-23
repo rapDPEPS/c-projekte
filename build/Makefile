@@ -155,6 +155,19 @@ StructTest/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StructTest.dir/build.make CMakeFiles/StructTest.dir/build
 .PHONY : StructTest/fast
 
+#=============================================================================
+# Target rules for targets named DynamicMemory
+
+# Build rule for target.
+DynamicMemory: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DynamicMemory
+.PHONY : DynamicMemory
+
+# fast build rule for target.
+DynamicMemory/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DynamicMemory.dir/build.make CMakeFiles/DynamicMemory.dir/build
+.PHONY : DynamicMemory/fast
+
 RockPaperScissor.o: RockPaperScissor.c.o
 .PHONY : RockPaperScissor.o
 
@@ -178,6 +191,30 @@ RockPaperScissor.s: RockPaperScissor.c.s
 RockPaperScissor.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RockPaperScissor.dir/build.make CMakeFiles/RockPaperScissor.dir/RockPaperScissor.c.s
 .PHONY : RockPaperScissor.c.s
+
+dynamicMemory.o: dynamicMemory.c.o
+.PHONY : dynamicMemory.o
+
+# target to build an object file
+dynamicMemory.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DynamicMemory.dir/build.make CMakeFiles/DynamicMemory.dir/dynamicMemory.c.o
+.PHONY : dynamicMemory.c.o
+
+dynamicMemory.i: dynamicMemory.c.i
+.PHONY : dynamicMemory.i
+
+# target to preprocess a source file
+dynamicMemory.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DynamicMemory.dir/build.make CMakeFiles/DynamicMemory.dir/dynamicMemory.c.i
+.PHONY : dynamicMemory.c.i
+
+dynamicMemory.s: dynamicMemory.c.s
+.PHONY : dynamicMemory.s
+
+# target to generate assembly for a file
+dynamicMemory.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DynamicMemory.dir/build.make CMakeFiles/DynamicMemory.dir/dynamicMemory.c.s
+.PHONY : dynamicMemory.c.s
 
 helloWorld.o: helloWorld.c.o
 .PHONY : helloWorld.o
@@ -235,12 +272,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... DynamicMemory"
 	@echo "... MinimalCMake"
 	@echo "... RockPaperScissor"
 	@echo "... StructTest"
 	@echo "... RockPaperScissor.o"
 	@echo "... RockPaperScissor.i"
 	@echo "... RockPaperScissor.s"
+	@echo "... dynamicMemory.o"
+	@echo "... dynamicMemory.i"
+	@echo "... dynamicMemory.s"
 	@echo "... helloWorld.o"
 	@echo "... helloWorld.i"
 	@echo "... helloWorld.s"

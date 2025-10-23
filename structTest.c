@@ -11,11 +11,13 @@ typedef struct person
 } person;
 
 person people[1024];
+const person emptyPerson;
 int peopleCount = 0;
 
 void addPerson();
 void removePerson();
 void listPeople();
+int comparePeople(const person* a, const person* b, int sortOption);
 void readNumber(int* dest);
 void readFloat(float* dest);
 
@@ -74,7 +76,8 @@ void addPerson() {
     newPerson.age = age;
     newPerson.height = height;
 
-    people[peopleCount++] = newPerson;
+    people[peopleCount] = newPerson;
+    peopleCount++;
     
 }
 
@@ -82,8 +85,7 @@ void removePerson() {
     int id;
     printf("What this users ID?\n");
     scanf("%d", &id);
-    person person;
-    people[id] = person;
+    people[id] = emptyPerson;
     for (size_t i = id; i < peopleCount; i++)
     {
         people[i] = people[i+1];
@@ -93,11 +95,40 @@ void removePerson() {
 }
 
 void listPeople() {
-    printf("======== %d PEOPLE ========\n", peopleCount);
+    person sorted[1024];
+    printf("How would you like the people to be sorted?\n1. By ID (ascending)\n2. By Age (ascending)\n3. By Height (ascending)\n4. By First Name\n>");
+    int sortOption;
+    readNumber(&sortOption);
+
+    if (sortOption < 1 || sortOption > 4) {
+        printf("Invalid Option. Defaulting to ID");
+        sortOption = 1;   
+    }
 
     for (size_t i = 0; i < peopleCount; i++)
     {
-        person person = people[i];
+        sorted[i] = people[i];   
+    }
+
+    for (size_t i = 0; i < peopleCount; i++)
+    {
+        for (size_t j = 0; j < peopleCount; j++)
+        {
+            if (comparePeople(&sorted[i], &sorted[j], sortOption) > 0) {
+                person temp = sorted[i];
+                sorted[i] = sorted[j];
+                sorted[j] = temp;
+            }
+        }
+        
+    }
+    
+    
+
+    printf("======== %d PEOPLE ========\n", peopleCount);
+    for (size_t i = 0; i < peopleCount; i++)
+    {
+        person person = sorted[i];
         printf("ID: %d\n", person.id);
         printf("Name: %s %s\n", person.firstName, person.lastName);
         printf("Age: %d\n", person.age);
@@ -106,6 +137,22 @@ void listPeople() {
     }
     
 }
+
+int comparePeople(const person* firstPerson, const person* secondPerson, int sortOption) {
+    switch (sortOption)
+    {
+    case 1:
+        return firstPerson->id < secondPerson->id ? 1 : 0;
+    case 2:
+        return firstPerson->age < secondPerson->age ? 1 : 0;
+    case 3:
+        return firstPerson->height < secondPerson->height ? 1 : 0;
+    case 4:
+        return strcmp(firstPerson->firstName, secondPerson->firstName) < 0 ? 1 : 0;
+    }
+}
+
+// put in header
 
 void readNumber(int* dest) {
     int ret = scanf("%d", dest);
