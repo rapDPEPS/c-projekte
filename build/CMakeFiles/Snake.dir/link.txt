@@ -1,1 +1,0 @@
-/bin/clang -g -Wl,--allow-multiple-definition CMakeFiles/Snake.dir/Snake.c.o -o Snake 

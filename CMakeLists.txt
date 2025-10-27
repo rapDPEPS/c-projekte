@@ -1,14 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
-project(MinimalCMake)
+set(CMAKE_C_COMPILER "C:/mingw64/bin/gcc.exe" CACHE FILEPATH "C compiler")
+set(CMAKE_CXX_COMPILER "C:/mingw64/bin/g++.exe" CACHE FILEPATH "C++ compiler")
+project(CProjects C)
 
 set(CMAKE_C_STANDARD 17)
-set(CMAKE_CXX_STANDARD 17)
 
-add_executable(MinimalCMake helloWorld.c)
-add_executable(RockPaperScissor RockPaperScissor.c)
-#add_executable(Snake Snake.c)
-
-#add_executable(MultipleFiles a.c b.c)
-
-add_executable(StructTest structTest.c)
-add_executable(DynamicMemory dynamicMemory.c)
+#add_executable(helloWorld helloWorld.c)
+#add_executable(RockPaperScissor RockPaperScissor.c)
+add_executable(DynamicMemory dynamicMemory.c readFunctions.c)
+#add_executable(StructTest structTest.c readFunctions.c)

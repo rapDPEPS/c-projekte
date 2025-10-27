@@ -1,6 +1,3 @@
-/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build/CMakeFiles/MinimalCMake.dir
-/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build/CMakeFiles/RockPaperScissor.dir
-/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build/CMakeFiles/StructTest.dir
-/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build/CMakeFiles/DynamicMemory.dir
-/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build/CMakeFiles/edit_cache.dir
-/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build/CMakeFiles/rebuild_cache.dir
+C:/Users/te_rapthom/OtherProjects/C-Projekte/c-projekte/build/CMakeFiles/DynamicMemory.dir
+C:/Users/te_rapthom/OtherProjects/C-Projekte/c-projekte/build/CMakeFiles/edit_cache.dir
+C:/Users/te_rapthom/OtherProjects/C-Projekte/c-projekte/build/CMakeFiles/rebuild_cache.dir

@@ -1,1 +1,0 @@
-/bin/clang -g -Wl,--allow-multiple-definition CMakeFiles/RockPaperScissor.dir/RockPaperScissor.c.o -o RockPaperScissor 

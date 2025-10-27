@@ -1,26 +1,14 @@
 [
 {
-  "directory": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build",
-  "command": "/bin/clang   -g -std=gnu17 -o CMakeFiles/MinimalCMake.dir/helloWorld.c.o -c /home/ldap/Xentwicklung/Raphael.Thom/c-projekte/helloWorld.c",
-  "file": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/helloWorld.c",
-  "output": "CMakeFiles/MinimalCMake.dir/helloWorld.c.o"
+  "directory": "C:/Users/te_rapthom/OtherProjects/C-Projekte/c-projekte/build",
+  "command": "C:\\mingw64\\bin\\gcc.exe   -g -std=gnu17 -o CMakeFiles\\DynamicMemory.dir\\dynamicMemory.c.obj -c C:\\Users\\te_rapthom\\OtherProjects\\C-Projekte\\c-projekte\\dynamicMemory.c",
+  "file": "C:/Users/te_rapthom/OtherProjects/C-Projekte/c-projekte/dynamicMemory.c",
+  "output": "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.obj"
 },
 {
-  "directory": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build",
-  "command": "/bin/clang   -g -std=gnu17 -o CMakeFiles/RockPaperScissor.dir/RockPaperScissor.c.o -c /home/ldap/Xentwicklung/Raphael.Thom/c-projekte/RockPaperScissor.c",
-  "file": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/RockPaperScissor.c",
-  "output": "CMakeFiles/RockPaperScissor.dir/RockPaperScissor.c.o"
-},
-{
-  "directory": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build",
-  "command": "/bin/clang   -g -std=gnu17 -o CMakeFiles/StructTest.dir/structTest.c.o -c /home/ldap/Xentwicklung/Raphael.Thom/c-projekte/structTest.c",
-  "file": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/structTest.c",
-  "output": "CMakeFiles/StructTest.dir/structTest.c.o"
-},
-{
-  "directory": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/build",
-  "command": "/bin/clang   -g -std=gnu17 -o CMakeFiles/DynamicMemory.dir/dynamicMemory.c.o -c /home/ldap/Xentwicklung/Raphael.Thom/c-projekte/dynamicMemory.c",
-  "file": "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/dynamicMemory.c",
-  "output": "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.o"
+  "directory": "C:/Users/te_rapthom/OtherProjects/C-Projekte/c-projekte/build",
+  "command": "C:\\mingw64\\bin\\gcc.exe   -g -std=gnu17 -o CMakeFiles\\DynamicMemory.dir\\readFunctions.c.obj -c C:\\Users\\te_rapthom\\OtherProjects\\C-Projekte\\c-projekte\\readFunctions.c",
+  "file": "C:/Users/te_rapthom/OtherProjects/C-Projekte/c-projekte/readFunctions.c",
+  "output": "CMakeFiles/DynamicMemory.dir/readFunctions.c.obj"
 }
 ]

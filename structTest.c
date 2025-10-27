@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "readFunctions.h"
+
 typedef struct person
 {
     int id;
@@ -18,8 +20,6 @@ void addPerson();
 void removePerson();
 void listPeople();
 int comparePeople(const person* a, const person* b, int sortOption);
-void readNumber(int* dest);
-void readFloat(float* dest);
 
 int main(void) {
     while (1) {
@@ -149,25 +149,5 @@ int comparePeople(const person* firstPerson, const person* secondPerson, int sor
         return firstPerson->height < secondPerson->height ? 1 : 0;
     case 4:
         return strcmp(firstPerson->firstName, secondPerson->firstName) < 0 ? 1 : 0;
-    }
-}
-
-// put in header
-
-void readNumber(int* dest) {
-    int ret = scanf("%d", dest);
-    if (ret == 0) {
-        char garbage[1024];
-        scanf("%s", garbage);
-        printf("garbage input discarded: %s\n", garbage);
-    }
-}
-
-void readFloat(float* dest) {
-    int ret = scanf("%f", dest);
-    if (ret == 0) {
-        char garbage[1024];
-        scanf("%s", garbage);
-        printf("garbage input discarded: %s\n", garbage);
     }
 }

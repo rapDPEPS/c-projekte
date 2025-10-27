@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.o"
-  "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.o.d"
-  "DynamicMemory"
+  "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.obj"
+  "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.obj.d"
+  "CMakeFiles/DynamicMemory.dir/readFunctions.c.obj"
+  "CMakeFiles/DynamicMemory.dir/readFunctions.c.obj.d"
+  "DynamicMemory.exe"
+  "DynamicMemory.exe.manifest"
   "DynamicMemory.pdb"
+  "libDynamicMemory.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

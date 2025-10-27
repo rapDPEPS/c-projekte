@@ -8,11 +8,16 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ldap/Xentwicklung/Raphael.Thom/c-projekte/dynamicMemory.c" "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.o" "gcc" "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.o.d"
+  "C:/Users/te_rapthom/OtherProjects/C-Projekte/c-projekte/dynamicMemory.c" "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.obj" "gcc" "CMakeFiles/DynamicMemory.dir/dynamicMemory.c.obj.d"
+  "C:/Users/te_rapthom/OtherProjects/C-Projekte/c-projekte/readFunctions.c" "CMakeFiles/DynamicMemory.dir/readFunctions.c.obj" "gcc" "CMakeFiles/DynamicMemory.dir/readFunctions.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
 set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

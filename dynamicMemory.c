@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "readFunctions.h"
+
 typedef struct City{
-    int population;
     char name[64];
+    int population;
 } City;
 
 typedef struct ListElem {
@@ -14,6 +16,10 @@ typedef struct ListElem {
 } ListElem;
 
 void printCity(const City* city);
+void createNewCity(City* newCity);
+void appendList(const City* city, ListElem** listHead);
+void printList(const ListElem* listHead);
+void freeList();
 
 int main(void) {
     // printf("%zu\n", sizeof(City));
@@ -33,10 +39,96 @@ int main(void) {
     // printCity(&city[1]);
     // printCity(city+2);
     // free(city);
-    
-    return 0;
+
+    ListElem* listHead = NULL;
+
+    while (1) {
+        printf("1. Add City\n2. Print List\n3. Free List\n>");
+        int option;
+        readNumber(&option);
+        switch (option)
+        {
+        case 1:
+            City* newCity = malloc(sizeof(City));
+            createNewCity(newCity);
+            appendList(newCity, &listHead);
+            break;
+        case 2:
+            printList(listHead);
+            break;
+        case 3:
+            freeList(&listHead);
+            break;
+        
+        default:
+            printf("Invalid Option.");
+            break;
+        }
+    }
+
 }
 
 void printCity(const City* city) {
-    printf("Population: %d\nName: %s\n", city->population, city->name);
+    printf("Name: %s\nPopulation: %d\n", city->name, city->population);
+}
+
+void createNewCity(City* newCity) {
+    printf("Whats the city called?\n");
+    scanf("%s", newCity->name);
+
+    printf("Whats the city's population?\n");
+    readNumber(&newCity->population);
+}
+
+void appendList(const City* city, ListElem** listHead) {
+    ListElem* newElem = malloc(sizeof(ListElem));
+    newElem->city = *city;
+    newElem->next = NULL;
+
+    if (*listHead == NULL) {
+        *listHead = newElem;
+    } else {
+        ListElem* current = *listHead;
+
+        while (current->next != NULL) {
+            current = current->next;
+        }
+
+        current->next = newElem;
+    }
+}
+
+void printList(const ListElem* listHead) {
+
+    if (listHead == NULL) {
+        printf("There are currently no cities.\n");
+        return;
+    }
+
+    const ListElem* currentListElem = listHead;
+
+    while (1) {    
+        printf("---------------\n");
+        printCity(&currentListElem->city);
+        printf("---------------\n");
+
+        if (currentListElem->next != NULL) {
+            currentListElem = currentListElem->next;
+        } else {
+            break;
+        }
+    }
+}
+
+void freeList(ListElem** listHead) {
+    ListElem* currentListElem = *listHead;
+    //ListElem* nextListElem;
+
+    while (currentListElem != NULL) {
+        ListElem* nextListElem = currentListElem->next;
+        free(currentListElem);
+        currentListElem = nextListElem;
+    }
+
+    *listHead = NULL;
 }
